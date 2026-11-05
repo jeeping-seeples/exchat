@@ -55,7 +55,8 @@ impl Default for Settings {
 
 impl Settings {
     pub fn path() -> Result<PathBuf> {
-        let dirs = ProjectDirs::from("", "", "exchat").context("could not find a home directory")?;
+        let dirs =
+            ProjectDirs::from("", "", "exchat").context("could not find a home directory")?;
         Ok(dirs.config_dir().join("settings.json"))
     }
 
@@ -65,8 +66,8 @@ impl Settings {
         if !path.exists() {
             return Ok(Self::default());
         }
-        let text = fs::read_to_string(&path)
-            .with_context(|| format!("reading {}", path.display()))?;
+        let text =
+            fs::read_to_string(&path).with_context(|| format!("reading {}", path.display()))?;
         serde_json::from_str(&text).with_context(|| format!("parsing {}", path.display()))
     }
 
@@ -87,6 +88,7 @@ impl Settings {
         Ok(())
     }
 
+    #[allow(dead_code)]
     pub fn provider(&self, name: &str) -> Option<&Provider> {
         self.providers.iter().find(|p| p.name == name)
     }

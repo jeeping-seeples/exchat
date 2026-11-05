@@ -99,7 +99,7 @@ src/
 ## Milestones
 
 - [x] **M0** Repo, plan, settings model with persistence + tests
-- [ ] **M1** egui window: chat view with fake echo reply, settings window editing providers/models/roles and saving
+- [x] **M1** egui window: chat view with fake echo reply, settings window editing providers/models/roles and saving
 - [ ] **M2** `llm.rs`: real chat completions + streaming against a configured provider; explainer role works as a plain chat
 - [ ] **M3** `search.rs` + `pipeline.rs`: refine → search → judge loop with visible steps and citations
 - [ ] **M4** `history.rs`: save chats, history panel, reopen/delete, titler role
