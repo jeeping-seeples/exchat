@@ -1,0 +1,16 @@
+[package]
+name = "exchat"
+version = "0.1.0"
+edition = "2021"
+description = "Minimal egui chat app with a refine/search/judge/explain research loop"
+
+[dependencies]
+anyhow = "1"
+directories = "6"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+
+# Added in M1 (use `cargo add eframe` to get the current version):
+# eframe = "..."
+# Added in M2:
+# reqwest, tokio
